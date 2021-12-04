@@ -7,8 +7,8 @@ import time
 
 def sendmsg(msg):
     string = msg 
-    url = 'https://api.telegram.org/bot1620724678/sendMessage' #your bot url here
-    myobj = {'chat_id': '-456547', 'text': msg} #your chat id here
+    url = 'https://api.telegram.org/YOURBOTURL/sendMessage' #your bot url here
+    myobj = {'chat_id': 'YOURCHATID', 'text': msg} #your chat id here
     x = requests.post(url, data = myobj)
 
 peoples_steamid_array = [["76561198078532888", "Name1"], ["76561198076135234", "Name2"], ["76561198105050455", "Name3"], ["76561198102330034", "Name4"], ["76561198127896843", "Name5"], ["76561198079828153", "Name6"]] #first SteamID. second Name of your choice
@@ -34,7 +34,6 @@ try:
                     if(person[1] in people_online):
                         people_online.remove(person[1])
                         people_online_counter =- 1
-                #print(online_status, person[1])
                 
             else:
                 print("error with api call")
