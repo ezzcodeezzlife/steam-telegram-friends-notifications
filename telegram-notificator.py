@@ -47,11 +47,11 @@ try:
             
             sendmsg(string_people_online + "sind Online" )
 	    print("timeouted 30 * 60")
-            time.sleep(60 * 60) #20 min timeout after sending msg
+            time.sleep(60 * 60) #1h timeout
             
 
         current_online = len(people_online)
-        time.sleep(30) #20 secs
+        time.sleep(30) #30 secs
 
 except Exception as e:
     print(e)
